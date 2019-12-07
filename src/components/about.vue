@@ -22,8 +22,6 @@ export default {
                 title:'hello',
                 flag:'t',
                 message:'this is test',
-                ok:'ok',
-                cancel:'cancel',
                 okTitle:'okok',
                 cancelTitle:'quxiao',
                 okCallback:function(){

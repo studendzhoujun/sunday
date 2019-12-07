@@ -1,12 +1,11 @@
 require('./common.css')
-const MODAL_WRAP_CLASS = 'gome-modal-wrap'
-const MODAL_NODE_CLASS = 'gome-modal-node'
-const CONTENT_CLASS = 'gome-content'
-const TITLE_CONTENT_CLASS = 'gome-title-content'
-const MSG_CLASS = 'gome-content-msg'
-const BUTTON_GROUP_CLASS = 'gome-btn-group'
-const BUTTON_CLASS = 'gome-btn'
-const BTNGROUP={'cancelTitle':'gome-cancel-btn','okTitle':'gome-ok-btn'}
+const MODAL_WRAP_CLASS = 'zj-modal-wrap'
+const MODAL_NODE_CLASS = 'zj-modal-node'
+const CONTENT_CLASS = 'zj-content'
+const TITLE_CONTENT_CLASS = 'zj-title-content'
+const MSG_CLASS = 'zj-content-msg'
+const BUTTON_GROUP_CLASS = 'zj-btn-group'
+const BTNGROUP={'cancelTitle':'zj-cancel-btn','okTitle':'zj-ok-btn'}
 class Modal{
     constructor(){
        this.wrap=document.querySelector(MODAL_WRAP_CLASS); 
@@ -45,15 +44,11 @@ class Alert extends Modal{
          super()
          this.titleMsg=config.title
          this.msg=config.message
-         this.ok=config.ok
-         this.cancel=config.cancel
-         this.callback=config.callback
          this.okCallback=config.okCallback
          this.cancelCallback=config.cancelCallback
          this.okTitle=config.okTitle
          this.cancelTitle=config.cancelTitle         
          this.flag=config.flag
-        //  this.objBtn={'cancel':config.cancel,'ok':config.ok}
          this.getBtn()
          this.createNodeContent()   
          this.bindEvents()
@@ -111,8 +106,8 @@ class Alert extends Modal{
             }
      }
      bindEvents(){
-         let cancelbutton =this.node.querySelector('.gome-cancel-btn')
-         let okbutton =this.node.querySelector('.gome-ok-btn')         
+         let cancelbutton =this.node.querySelector('.zj-cancel-btn')
+         let okbutton =this.node.querySelector('.zj-ok-btn')         
          let that=this
          if(okbutton){
             okbutton.addEventListener('click',function(){

@@ -5,12 +5,29 @@
 </template>
 
 <script>
+import Alert from './modal/modal.js'
 export default {
   name: 'HelloWorld',
   data(){
     return {
       msg:'hello word'
     }
+  },
+  created(){
+    console.log('111')
+    new Alert({
+        title:'hello',
+        flag:'',
+        message:'this is test this is testthis is test this is testthis is test this is testthis is test this is testthis is test this is testthis is test this is test',
+        okTitle:'',
+        cancelTitle:'取消',
+        okCallback:function(){
+            console.log('ok')
+        },
+        cancelCallback:function(){
+            console.log('canceld')
+        },
+      }).show()
   },
   methods:{
     goNext(){
